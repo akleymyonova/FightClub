@@ -1,0 +1,10 @@
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\bin\Debug\Fight.exe.config
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\bin\Debug\Fight.exe
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\bin\Debug\Fight.pdb
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.csprojResolveAssemblyReference.cache
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.EntranceForm.resources
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.PlayForm.resources
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.Properties.Resources.resources
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.csproj.GenerateResource.Cache
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.exe
+C:\Users\Анастасия\Desktop\isd\Fight\Fight\obj\Debug\Fight.pdb
