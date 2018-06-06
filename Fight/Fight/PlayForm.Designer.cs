@@ -30,13 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayForm));
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.PlHeadBut = new System.Windows.Forms.Button();
+            this.PlBodyBut = new System.Windows.Forms.Button();
+            this.PlLegsBut = new System.Windows.Forms.Button();
+            this.playerProgressBar = new System.Windows.Forms.ProgressBar();
+            this.ComputerProgressBar = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ComLegsBut = new System.Windows.Forms.Button();
+            this.ComBodyBut = new System.Windows.Forms.Button();
+            this.ComHeadBut = new System.Windows.Forms.Button();
+            this.roundLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBox1
@@ -45,63 +49,71 @@
             this.listBox1.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(623, 108);
+            this.listBox1.Location = new System.Drawing.Point(600, 109);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(360, 706);
+            this.listBox1.Size = new System.Drawing.Size(431, 706);
             this.listBox1.TabIndex = 0;
             // 
-            // button1
+            // PlHeadBut
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(30, 257);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 65);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Голова";
-            this.button1.UseVisualStyleBackColor = false;
+            this.PlHeadBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PlHeadBut.Enabled = false;
+            this.PlHeadBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlHeadBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlHeadBut.Location = new System.Drawing.Point(71, 246);
+            this.PlHeadBut.Name = "PlHeadBut";
+            this.PlHeadBut.Size = new System.Drawing.Size(187, 65);
+            this.PlHeadBut.TabIndex = 4;
+            this.PlHeadBut.Text = "Голова";
+            this.PlHeadBut.UseVisualStyleBackColor = false;
+            this.PlHeadBut.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // PlBodyBut
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(30, 386);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 65);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Корпус";
-            this.button2.UseVisualStyleBackColor = false;
+            this.PlBodyBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PlBodyBut.Enabled = false;
+            this.PlBodyBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlBodyBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlBodyBut.Location = new System.Drawing.Point(71, 375);
+            this.PlBodyBut.Name = "PlBodyBut";
+            this.PlBodyBut.Size = new System.Drawing.Size(187, 65);
+            this.PlBodyBut.TabIndex = 5;
+            this.PlBodyBut.Text = "Корпус";
+            this.PlBodyBut.UseVisualStyleBackColor = false;
+            this.PlBodyBut.Click += new System.EventHandler(this.PlBodyBut_Click);
             // 
-            // button3
+            // PlLegsBut
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(30, 523);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(187, 65);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Ноги";
-            this.button3.UseVisualStyleBackColor = false;
+            this.PlLegsBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PlLegsBut.Enabled = false;
+            this.PlLegsBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlLegsBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlLegsBut.Location = new System.Drawing.Point(71, 512);
+            this.PlLegsBut.Name = "PlLegsBut";
+            this.PlLegsBut.Size = new System.Drawing.Size(187, 65);
+            this.PlLegsBut.TabIndex = 6;
+            this.PlLegsBut.Text = "Ноги";
+            this.PlLegsBut.UseVisualStyleBackColor = false;
+            this.PlLegsBut.Click += new System.EventHandler(this.PlLegsBut_Click);
             // 
-            // progressBar1
+            // playerProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(380, 177);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(196, 23);
-            this.progressBar1.TabIndex = 7;
-            this.progressBar1.Value = 100;
+            this.playerProgressBar.Location = new System.Drawing.Point(380, 177);
+            this.playerProgressBar.Name = "playerProgressBar";
+            this.playerProgressBar.Size = new System.Drawing.Size(196, 23);
+            this.playerProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.playerProgressBar.TabIndex = 7;
+            this.playerProgressBar.Value = 100;
             // 
-            // progressBar2
+            // ComputerProgressBar
             // 
-            this.progressBar2.Location = new System.Drawing.Point(1052, 177);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(196, 23);
-            this.progressBar2.Step = 1;
-            this.progressBar2.TabIndex = 8;
-            this.progressBar2.Value = 100;
+            this.ComputerProgressBar.Location = new System.Drawing.Point(1052, 177);
+            this.ComputerProgressBar.Name = "ComputerProgressBar";
+            this.ComputerProgressBar.Size = new System.Drawing.Size(196, 23);
+            this.ComputerProgressBar.Step = 1;
+            this.ComputerProgressBar.TabIndex = 8;
+            this.ComputerProgressBar.Value = 100;
+            this.ComputerProgressBar.Click += new System.EventHandler(this.progressBar2_Click);
             // 
             // label2
             // 
@@ -127,19 +139,74 @@
             this.label1.TabIndex = 11;
             this.label1.Text = " ";
             // 
+            // ComLegsBut
+            // 
+            this.ComLegsBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ComLegsBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComLegsBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComLegsBut.Location = new System.Drawing.Point(1349, 499);
+            this.ComLegsBut.Name = "ComLegsBut";
+            this.ComLegsBut.Size = new System.Drawing.Size(187, 65);
+            this.ComLegsBut.TabIndex = 16;
+            this.ComLegsBut.Text = "Ноги";
+            this.ComLegsBut.UseVisualStyleBackColor = false;
+            this.ComLegsBut.Click += new System.EventHandler(this.ComLegsBut_Click);
+            // 
+            // ComBodyBut
+            // 
+            this.ComBodyBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ComBodyBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComBodyBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComBodyBut.Location = new System.Drawing.Point(1349, 375);
+            this.ComBodyBut.Name = "ComBodyBut";
+            this.ComBodyBut.Size = new System.Drawing.Size(187, 65);
+            this.ComBodyBut.TabIndex = 15;
+            this.ComBodyBut.Text = "Корпус";
+            this.ComBodyBut.UseVisualStyleBackColor = false;
+            this.ComBodyBut.Click += new System.EventHandler(this.ComBodyBut_Click);
+            // 
+            // ComHeadBut
+            // 
+            this.ComHeadBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ComHeadBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComHeadBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ComHeadBut.Location = new System.Drawing.Point(1349, 231);
+            this.ComHeadBut.Name = "ComHeadBut";
+            this.ComHeadBut.Size = new System.Drawing.Size(187, 65);
+            this.ComHeadBut.TabIndex = 14;
+            this.ComHeadBut.Text = "Голова";
+            this.ComHeadBut.UseVisualStyleBackColor = false;
+            this.ComHeadBut.Click += new System.EventHandler(this.ComHeadBut_Click);
+            // 
+            // roundLabel
+            // 
+            this.roundLabel.AutoSize = true;
+            this.roundLabel.BackColor = System.Drawing.Color.Transparent;
+            this.roundLabel.Font = new System.Drawing.Font("Old English Text MT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.roundLabel.Location = new System.Drawing.Point(705, 32);
+            this.roundLabel.Name = "roundLabel";
+            this.roundLabel.Size = new System.Drawing.Size(196, 57);
+            this.roundLabel.TabIndex = 17;
+            this.roundLabel.Text = "Round 1";
+            // 
             // PlayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1428, 842);
+            this.ClientSize = new System.Drawing.Size(1612, 842);
+            this.Controls.Add(this.roundLabel);
+            this.Controls.Add(this.ComLegsBut);
+            this.Controls.Add(this.ComBodyBut);
+            this.Controls.Add(this.ComHeadBut);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ComputerProgressBar);
+            this.Controls.Add(this.playerProgressBar);
+            this.Controls.Add(this.PlLegsBut);
+            this.Controls.Add(this.PlBodyBut);
+            this.Controls.Add(this.PlHeadBut);
             this.Controls.Add(this.listBox1);
             this.Name = "PlayForm";
             this.Text = "PlayForm";
@@ -153,12 +220,16 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Button PlHeadBut;
+        private System.Windows.Forms.Button PlBodyBut;
+        private System.Windows.Forms.Button PlLegsBut;
+        private System.Windows.Forms.ProgressBar playerProgressBar;
+        private System.Windows.Forms.ProgressBar ComputerProgressBar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ComLegsBut;
+        private System.Windows.Forms.Button ComBodyBut;
+        private System.Windows.Forms.Button ComHeadBut;
+        private System.Windows.Forms.Label roundLabel;
     }
 }

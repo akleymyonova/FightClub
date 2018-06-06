@@ -8,7 +8,7 @@ namespace Fight
 {
     public enum BodyPart
     {
-        Head,
+        Head=1,
         Body,
         Legs
     }
@@ -41,10 +41,10 @@ namespace Fight
             Blocked = bp;
         }
 
-        public void GetHit(BodyPart bp,Player player)
+        public void GetHit(BodyPart bp)
         {
             int ResPoints;
-            if(bp!=player.Blocked)
+            if(bp!=Blocked)
             {
                 if (HP - 10 > 0)
                 {
@@ -53,30 +53,32 @@ namespace Fight
                         if (HP - 15 > 0)
                         {
                             ResPoints = 15;
-                            player.HP -= ResPoints;
-                            Wound?.Invoke(this, new PlayerEventArgs($"Player {Name} received {ResPoints}", Name, ResPoints));
+                            HP -= ResPoints;
+                            Wound?.Invoke(this, new PlayerEventArgs(String.Format("Player {0} received minus {1} points, wounded {2}",Name,ResPoints,bp), Name, ResPoints,HP));
                         }
                         else
                         {
-                            Death?.Invoke(this, new PlayerEventArgs($"Player {Name} is dead.", Name, 0));
+                            HP = 0;
+                            Death?.Invoke(this, new PlayerEventArgs($"Player {Name} is dead.", Name, HP,HP));
                         }
                     }
                     else
                     {
                         ResPoints =10;
-                        player.HP -= ResPoints;
-                        Wound?.Invoke(this, new PlayerEventArgs($"Player {Name} received {ResPoints}",Name,ResPoints));
+                        HP -= ResPoints;
+                        Wound?.Invoke(this, new PlayerEventArgs(String.Format("Player {0} received minus {1} points, wounded {2}", Name, ResPoints, bp), Name, ResPoints, HP));
                     }
                 }
 
                 else
                 {
-                    Death?.Invoke(this, new PlayerEventArgs($"Player {Name} is dead.", Name, 0));
+                    HP = 0;
+                    Death?.Invoke(this, new PlayerEventArgs($"Player {Name} is dead.", Name, HP,HP));
                 }
             }
             else
             {
-                Block?.Invoke(this, new PlayerEventArgs($"Player {Name} was blocked succsessfully", Name, 0));
+                Block?.Invoke(this, new PlayerEventArgs($"Player {Name} was blocked succsessfully", Name, 0,HP));
             }
 
         }
