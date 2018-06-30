@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Fight
 {
-    class PlayerController
+    public class PlayerController
     {
+        Player computer = new Player("Computer");
+        Player player=new Player();
+
+        public void SetPlayerName(string name)
+        {
+            player.Name = name;
+        }
+
+        public int GetHp()
+        {
+            return
+        }
     }
 }
