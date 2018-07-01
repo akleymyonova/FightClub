@@ -54,7 +54,7 @@
             this.PlayerNameLabel.AutoSize = true;
             this.PlayerNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.PlayerNameLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlayerNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PlayerNameLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.PlayerNameLabel.Location = new System.Drawing.Point(180, 76);
             this.PlayerNameLabel.Name = "PlayerNameLabel";
             this.PlayerNameLabel.Size = new System.Drawing.Size(16, 21);
@@ -98,6 +98,7 @@
             // 
             // HitComboBox
             // 
+            this.HitComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.HitComboBox.FormattingEnabled = true;
             this.HitComboBox.Items.AddRange(new object[] {
             "Голова",
@@ -107,11 +108,11 @@
             this.HitComboBox.Name = "HitComboBox";
             this.HitComboBox.Size = new System.Drawing.Size(187, 24);
             this.HitComboBox.TabIndex = 25;
-            this.HitComboBox.Text = "Голова";
             // 
             // BlockComboBox
             // 
             this.BlockComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.BlockComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BlockComboBox.FormattingEnabled = true;
             this.BlockComboBox.Items.AddRange(new object[] {
             "Голова",
@@ -121,13 +122,12 @@
             this.BlockComboBox.Name = "BlockComboBox";
             this.BlockComboBox.Size = new System.Drawing.Size(187, 24);
             this.BlockComboBox.TabIndex = 26;
-            this.BlockComboBox.Text = "Голова";
             // 
             // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 453);
+            this.ClientSize = new System.Drawing.Size(467, 400);
             this.Controls.Add(this.BlockComboBox);
             this.Controls.Add(this.HitComboBox);
             this.Controls.Add(this.BlockButton);
@@ -136,7 +136,9 @@
             this.Controls.Add(this.playerProgressBar);
             this.Controls.Add(this.roundLabel);
             this.Name = "PlayerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlayerForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PlayerForm_FormClosed);
             this.Load += new System.EventHandler(this.PlayerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

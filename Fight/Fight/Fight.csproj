@@ -59,57 +59,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComputerForm.cs">
+    <Compile Include="Views\ComputerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComputerForm.Designer.cs">
+    <Compile Include="Views\ComputerForm.Designer.cs">
       <DependentUpon>ComputerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EntranceForm.cs">
+    <Compile Include="Views\EntranceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EntranceForm.Designer.cs">
+    <Compile Include="Views\EntranceForm.Designer.cs">
       <DependentUpon>EntranceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IPresenter.cs" />
-    <Compile Include="Iview.cs" />
-    <Compile Include="Logging.cs">
+    <Compile Include="Views\Iview.cs" />
+    <Compile Include="Views\Logging.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Logging.Designer.cs">
+    <Compile Include="Views\Logging.Designer.cs">
       <DependentUpon>Logging.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
-    <Compile Include="PlayerPresenter.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Presenters\PlayerPresenter.cs" />
     <Compile Include="PlayerEventArgs.cs" />
-    <Compile Include="PlayerForm.cs">
+    <Compile Include="Views\PlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayerForm.Designer.cs">
+    <Compile Include="Views\PlayerForm.Designer.cs">
       <DependentUpon>PlayerForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PlayForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PlayForm.Designer.cs">
-      <DependentUpon>PlayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ComputerForm.resx">
+    <EmbeddedResource Include="Views\ComputerForm.resx">
       <DependentUpon>ComputerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EntranceForm.resx">
+    <EmbeddedResource Include="Views\EntranceForm.resx">
       <DependentUpon>EntranceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Logging.resx">
+    <EmbeddedResource Include="Views\Logging.resx">
       <DependentUpon>Logging.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerForm.resx">
+    <EmbeddedResource Include="Views\PlayerForm.resx">
       <DependentUpon>PlayerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PlayForm.resx">
-      <DependentUpon>PlayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

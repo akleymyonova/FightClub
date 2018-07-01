@@ -15,6 +15,7 @@ namespace Fight
         Player player=new Player();
         Player computer = new Player("Computer");
         public int Round = 1;
+        public bool TheEnd = false;
 
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
@@ -28,7 +29,17 @@ namespace Fight
             player.Name = name;
         }
 
-       private BodyPart ComputerRandom()
+        public int SetComputerHP()
+        {
+            return computer.HP;
+        }
+
+        public void SetPlayerHP(ProgressBar pb)
+        {
+            pb.Value = player.HP;
+        }
+
+        private BodyPart ComputerRandom()
         {
             int bodyPart = new Random().Next(1, 4);
             return (BodyPart)bodyPart;
@@ -39,8 +50,12 @@ namespace Fight
             BodyPart blocked = view.Block();
             player.SetBlock(blocked);
             player.GetHit(ComputerRandom());
+            Round++;
+            logger.Trace("___________");
+            if (player.HP == 0) TheEnd = true;
+
         }
-        
+
         public void SetRound(Label label)
         {
             label.Text = "Round" + Round;
@@ -54,19 +69,10 @@ namespace Fight
         {
             ComputerBlock();
             BodyPart hitbp = view.Hit();
-            /*if((hitbp==BodyPart.Head&&computer.HP<=15)|| ((hitbp == BodyPart.Body || hitbp == BodyPart.Legs) && computer.HP <= 10))
-            {
-                computer.GetHit(hitbp);
-                computer.HP = 0;
-                logger.Info(player.Name+" победил");
-            }
-            else 
-            {
-
-            }*/
             computer.GetHit(hitbp);
-
             Round++;
+            logger.Trace("___________");
+            if (computer.HP == 0) TheEnd = true;
         }
     }
 }

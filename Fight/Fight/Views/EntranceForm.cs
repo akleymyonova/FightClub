@@ -23,8 +23,10 @@ namespace Fight
             if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrWhiteSpace(textBox1.Text))
             {
                 PlayerForm frm = new PlayerForm(textBox1.Text);
+               // ComputerForm cfrm = new ComputerForm();
                 this.Hide();
                 frm.Show();
+               // cfrm.Show();
             }
             else MessageBox.Show("Wrong input! Try again.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

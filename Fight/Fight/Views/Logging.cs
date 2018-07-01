@@ -16,5 +16,10 @@ namespace Fight
         {
             InitializeComponent();
         }
+
+        private void Logging_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -47,6 +47,7 @@
             this.Controls.Add(this.richTextBox1);
             this.Name = "Logging";
             this.Text = "Logging";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Logging_FormClosed);
             this.ResumeLayout(false);
 
         }
