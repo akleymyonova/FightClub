@@ -16,5 +16,23 @@ namespace Fight
         {
             InitializeComponent();
         }
+
+        
+        public void ChangeHP(ProgressBar pb, int newValue)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Hit(BodyPart bp)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+        private void ComputerForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

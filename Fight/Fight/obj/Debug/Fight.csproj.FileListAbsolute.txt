@@ -34,3 +34,11 @@ C:\Users\Анастасия\Documents\GitHub\FightClub\BackUp\Fight\obj\Debug\Fi
 C:\Users\Анастасия\Documents\GitHub\FightClub\BackUp\Fight\obj\Debug\Fight.csproj.GenerateResource.Cache
 C:\Users\Анастасия\Documents\GitHub\FightClub\BackUp\Fight\bin\Debug\NLog.Windows.Forms.dll
 C:\Users\Анастасия\Documents\GitHub\FightClub\BackUp\Fight\bin\Debug\NLog.Windows.Forms.xml
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\obj\Debug\Fight.ComputerForm.resources
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\obj\Debug\Fight.Logging.resources
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\obj\Debug\Fight.PlayerForm.resources
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\bin\Debug\NLog.config
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\bin\Debug\NLog.dll
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\bin\Debug\NLog.Windows.Forms.dll
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\bin\Debug\NLog.xml
+C:\Users\Анастасия\Documents\GitHub\FightClub\Fight\Fight\bin\Debug\NLog.Windows.Forms.xml

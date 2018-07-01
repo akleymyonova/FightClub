@@ -22,7 +22,7 @@ namespace Fight
             InitializeComponent();
             PlayerName = playerName;
             computer = new Player();
-            player = new Player(PlayerName, 100);
+            player = new Player(PlayerName);
 
             player.Block += ShowPlayer;
             player.Death += ShowPlayer;
@@ -128,7 +128,7 @@ namespace Fight
                 if (result == DialogResult.Yes)
                 {
                     computer = new Player();
-                    player = new Player(PlayerName, 100);
+                    player = new Player(PlayerName);
                     listBox1.Items.Clear();
                     player.Block += ShowPlayer;
                     player.Death += ShowPlayer;
@@ -170,7 +170,7 @@ namespace Fight
                 if (result == DialogResult.Yes)
                 {
                     computer = new Player();
-                    player = new Player(PlayerName, 100);
+                    player = new Player(PlayerName);
                     listBox1.Items.Clear();
                     player.Block += ShowPlayer;
                     player.Death += ShowPlayer;

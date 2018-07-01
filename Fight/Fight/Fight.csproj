@@ -71,6 +71,8 @@
     <Compile Include="EntranceForm.Designer.cs">
       <DependentUpon>EntranceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="IPresenter.cs" />
+    <Compile Include="Iview.cs" />
     <Compile Include="Logging.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,7 +80,7 @@
       <DependentUpon>Logging.cs</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerController.cs" />
+    <Compile Include="PlayerPresenter.cs" />
     <Compile Include="PlayerEventArgs.cs" />
     <Compile Include="PlayerForm.cs">
       <SubType>Form</SubType>

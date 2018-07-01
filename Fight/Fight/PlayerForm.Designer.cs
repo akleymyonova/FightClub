@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.roundLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.PlayerNameLabel = new System.Windows.Forms.Label();
             this.playerProgressBar = new System.Windows.Forms.ProgressBar();
-            this.PlLegsBut = new System.Windows.Forms.Button();
-            this.PlBodyBut = new System.Windows.Forms.Button();
-            this.PlHeadBut = new System.Windows.Forms.Button();
+            this.HitBut = new System.Windows.Forms.Button();
+            this.BlockButton = new System.Windows.Forms.Button();
+            this.HitComboBox = new System.Windows.Forms.ComboBox();
+            this.BlockComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // roundLabel
@@ -42,81 +43,96 @@
             this.roundLabel.BackColor = System.Drawing.Color.Transparent;
             this.roundLabel.Font = new System.Drawing.Font("Old English Text MT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.roundLabel.Location = new System.Drawing.Point(122, 9);
+            this.roundLabel.Location = new System.Drawing.Point(147, 9);
             this.roundLabel.Name = "roundLabel";
             this.roundLabel.Size = new System.Drawing.Size(196, 57);
             this.roundLabel.TabIndex = 19;
             this.roundLabel.Text = "Round 1";
             // 
-            // label1
+            // PlayerNameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(155, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 21);
-            this.label1.TabIndex = 21;
-            this.label1.Text = " ";
+            this.PlayerNameLabel.AutoSize = true;
+            this.PlayerNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PlayerNameLabel.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PlayerNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PlayerNameLabel.Location = new System.Drawing.Point(180, 76);
+            this.PlayerNameLabel.Name = "PlayerNameLabel";
+            this.PlayerNameLabel.Size = new System.Drawing.Size(16, 21);
+            this.PlayerNameLabel.TabIndex = 21;
+            this.PlayerNameLabel.Text = " ";
             // 
             // playerProgressBar
             // 
-            this.playerProgressBar.Location = new System.Drawing.Point(112, 127);
+            this.playerProgressBar.Location = new System.Drawing.Point(137, 127);
             this.playerProgressBar.Name = "playerProgressBar";
             this.playerProgressBar.Size = new System.Drawing.Size(196, 23);
             this.playerProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.playerProgressBar.TabIndex = 20;
             this.playerProgressBar.Value = 100;
             // 
-            // PlLegsBut
+            // HitBut
             // 
-            this.PlLegsBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PlLegsBut.Enabled = false;
-            this.PlLegsBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlLegsBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlLegsBut.Location = new System.Drawing.Point(121, 364);
-            this.PlLegsBut.Name = "PlLegsBut";
-            this.PlLegsBut.Size = new System.Drawing.Size(187, 65);
-            this.PlLegsBut.TabIndex = 24;
-            this.PlLegsBut.Text = "Ноги";
-            this.PlLegsBut.UseVisualStyleBackColor = false;
+            this.HitBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.HitBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HitBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HitBut.Location = new System.Drawing.Point(12, 295);
+            this.HitBut.Name = "HitBut";
+            this.HitBut.Size = new System.Drawing.Size(187, 46);
+            this.HitBut.TabIndex = 23;
+            this.HitBut.Text = "Ударить";
+            this.HitBut.UseVisualStyleBackColor = false;
+            this.HitBut.Click += new System.EventHandler(this.HitBut_Click);
             // 
-            // PlBodyBut
+            // BlockButton
             // 
-            this.PlBodyBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PlBodyBut.Enabled = false;
-            this.PlBodyBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlBodyBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlBodyBut.Location = new System.Drawing.Point(121, 265);
-            this.PlBodyBut.Name = "PlBodyBut";
-            this.PlBodyBut.Size = new System.Drawing.Size(187, 65);
-            this.PlBodyBut.TabIndex = 23;
-            this.PlBodyBut.Text = "Корпус";
-            this.PlBodyBut.UseVisualStyleBackColor = false;
+            this.BlockButton.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BlockButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BlockButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockButton.Location = new System.Drawing.Point(257, 295);
+            this.BlockButton.Name = "BlockButton";
+            this.BlockButton.Size = new System.Drawing.Size(187, 46);
+            this.BlockButton.TabIndex = 24;
+            this.BlockButton.Text = "Защитить";
+            this.BlockButton.UseVisualStyleBackColor = false;
+            this.BlockButton.Click += new System.EventHandler(this.BlockButton_Click);
             // 
-            // PlHeadBut
+            // HitComboBox
             // 
-            this.PlHeadBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PlHeadBut.Enabled = false;
-            this.PlHeadBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlHeadBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PlHeadBut.Location = new System.Drawing.Point(121, 170);
-            this.PlHeadBut.Name = "PlHeadBut";
-            this.PlHeadBut.Size = new System.Drawing.Size(187, 65);
-            this.PlHeadBut.TabIndex = 22;
-            this.PlHeadBut.Text = "Голова";
-            this.PlHeadBut.UseVisualStyleBackColor = false;
+            this.HitComboBox.FormattingEnabled = true;
+            this.HitComboBox.Items.AddRange(new object[] {
+            "Голова",
+            "Корпус",
+            "Ноги"});
+            this.HitComboBox.Location = new System.Drawing.Point(12, 209);
+            this.HitComboBox.Name = "HitComboBox";
+            this.HitComboBox.Size = new System.Drawing.Size(187, 24);
+            this.HitComboBox.TabIndex = 25;
+            this.HitComboBox.Text = "Голова";
+            // 
+            // BlockComboBox
+            // 
+            this.BlockComboBox.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
+            this.BlockComboBox.FormattingEnabled = true;
+            this.BlockComboBox.Items.AddRange(new object[] {
+            "Голова",
+            "Корпус",
+            "Ноги"});
+            this.BlockComboBox.Location = new System.Drawing.Point(257, 209);
+            this.BlockComboBox.Name = "BlockComboBox";
+            this.BlockComboBox.Size = new System.Drawing.Size(187, 24);
+            this.BlockComboBox.TabIndex = 26;
+            this.BlockComboBox.Text = "Голова";
             // 
             // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 453);
-            this.Controls.Add(this.PlLegsBut);
-            this.Controls.Add(this.PlBodyBut);
-            this.Controls.Add(this.PlHeadBut);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(467, 453);
+            this.Controls.Add(this.BlockComboBox);
+            this.Controls.Add(this.HitComboBox);
+            this.Controls.Add(this.BlockButton);
+            this.Controls.Add(this.HitBut);
+            this.Controls.Add(this.PlayerNameLabel);
             this.Controls.Add(this.playerProgressBar);
             this.Controls.Add(this.roundLabel);
             this.Name = "PlayerForm";
@@ -130,10 +146,11 @@
         #endregion
 
         private System.Windows.Forms.Label roundLabel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label PlayerNameLabel;
         private System.Windows.Forms.ProgressBar playerProgressBar;
-        private System.Windows.Forms.Button PlLegsBut;
-        private System.Windows.Forms.Button PlBodyBut;
-        private System.Windows.Forms.Button PlHeadBut;
+        private System.Windows.Forms.Button HitBut;
+        private System.Windows.Forms.Button BlockButton;
+        private System.Windows.Forms.ComboBox HitComboBox;
+        private System.Windows.Forms.ComboBox BlockComboBox;
     }
 }

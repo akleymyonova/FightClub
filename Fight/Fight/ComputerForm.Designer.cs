@@ -76,6 +76,7 @@
             this.Controls.Add(this.roundLabel);
             this.Name = "ComputerForm";
             this.Text = "ComputerForm";
+            this.Load += new System.EventHandler(this.ComputerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

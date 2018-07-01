@@ -22,7 +22,7 @@ namespace Fight
         {
             if (!String.IsNullOrEmpty(textBox1.Text) && !String.IsNullOrWhiteSpace(textBox1.Text))
             {
-                PlayForm frm = new PlayForm(textBox1.Text);
+                PlayerForm frm = new PlayerForm(textBox1.Text);
                 this.Hide();
                 frm.Show();
             }
